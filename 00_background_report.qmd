@@ -1,0 +1,101 @@
+---
+title: "Week 0: Background Report"
+author: "Eric Xie"
+format: html
+---
+
+## A. Introduction
+Hello Everyone! My name is Eric Xie, and I'm currently an incoming 12th grader at the high school Geffen Academy. I'm interested in math, physics, and coding, and I hope to pursue Electrical Engineering in college. 
+
+With this internship, I hope to strengthen my data analysis skills and become more comfortable working with evidence analysis in the realm of research. I'm also looking forward to improving my skills with software tools such as RStudio, Quarto, and GitHub, and becoming more comfortable with presenting my findings in front of an audience.
+
+## B. Reproducible Research
+
+##### Question: What does reproducible research mean to me?
+
+Reproducibility in research refers to the ability of independent researchers to redo and reproduce the same findings as the original investigator of the research project. The background requirement for this is that the original researcher should ensure that the written procedures, including required materials and step-by-step guidelines, are accessible and clear. In short, to conduct reproducible research one needs to not only present the final conclusion, but also the intermediate process from start to finish of how the research progress, including transparent documentation on potential limitations of the findings or unanticipated errors. In my personal experiences, my lab reports after experiments in physics class last school year demonstrated reproducibility, as I wrote detailed procedure and material lists, and investigated sources that could have explained deviations in the conclusion.
+
+## C. Small R Exercise
+```{r}
+library(ggplot2)
+
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_smooth() +
+  geom_point() +
+  labs(
+    title = "Fuel Efficiency vs Car Weight",
+    x = "Weight (1000 lbs)",
+    y = "Miles per Gallon",
+  ) +
+  expand_limits(x = 0, y = 0)
+
+```
+Note: The gray shaded area represents the 95% confidence interval for the smoothed trend line
+
+##### Interpretation
+Main Finding: There is a clear negative correlation between car weight and fuel efficiency, meaning that the heavier a car is, the less fuel efficient it is (less miles per gallon of gas)
+
+However, towards the end of trend line, as the car weight reaches a certain point, the graph flattens out slightly, meaning that among heavier cars, differences in weight produce smaller changes in fuel efficiency than they do in lighter cars, within the scope of this data set.
+
+The confidence band is narrower towards the middle of the weight range, indicating that the trend line is a more reliable estimate of fuel efficiency for cars of moderate weight.
+
+## D. Background Memo
+
+The Hemoglobin A1c (HbA1c) test and the Continuous Glucose Monitoring (CGM) test are two common methods of monitoring diabetes type 2 after diagnosis. Though both could provide strong insight into glucose levels, HbA1c is more commonly used to track long-term blood glucose levels, whereas CGM is able to show a more detailed, day-to-day picture of how a patient’s glucose levels fluctuate. 
+
+The root behind this difference in function lies in how the two tests measure glucose. HbA1c measures glucose indirectly by measuring how much glucose has attached to the hemoglobin inside red blood cells. The HbA1c shows a rough average glucose level over a period of time (roughly 2-3 months), not at the instant of testing. On the other hand, CGM measures glucose directly and constantly by using a sensor under the patient’s skin to estimate glucose in interstitial fluids every few minutes, providing real-time tracking of glucose levels. Therefore, for scenarios of measuring time in range or above range, CGM is the optimal option, as it is more adept at depicting glucose variability: not only how much it changes in magnitude, but also how often it varies. 
+
+In real-life scenarios, practical uses of CGM could be monitoring post-meal spikes, nighttime lows or highs, or short-term trends in glucose levels, helping the patient better understand his body and be able to make decisions accordingly. CGM is also able to detect hypoglycemic episodes, occurring during a significant dip in a patient’s glucose level, alerting the patient. As hypoglycemic episodes could be dangerous in that glucose is the brain’s main fuel source, and when levels drop beyond a threshold, the patient could experience shakiness, sweating, dizziness, hunger, weakness, fast heartbeat, with more serious episodes entailing fainting, seizures, or loss of consciousness. It’s especially risky during sleep time, as the patient might not even notice the symptoms without the CGM sensor’s alert. 
+
+However, it’s also crucial to note that HbA1c is also able to reveal patient conditions that CGM is not. Specifically, due to its long-term monitoring nature, HbA1c can reveal long-term risks that could be linked to higher risk of diabetes complications over time, and could also be used as a tool of diagnosis, whereas CGM cannot. Thus, ultimately, both methods are important in that they provide different but complementary information, allowing for a more complete understanding of glucose control than either method could provide alone.
+
+## E. Paper Summary
+
+He et al. 2026, Defining Clinically Interpretable Glycemic Profiles Using Continuous Glucose Monitoring in Type 2 Diabetes
+
+Access: [https://pmc.ncbi.nlm.nih.gov/articles/PMC12925982/](https://pmc.ncbi.nlm.nih.gov/articles/PMC12925982/)
+
+##### Main Research Question
+In He et al.’s study, researchers aimed to define meaningful subcategories of type 2 diabetes patients and hypoglycemic tracking using continuous glucose monitoring (CGM) and metrics clinicians already understand. 
+
+##### Data Used
+The study’s primary dataset was profiles obtained from the HYPNOS trial, in which the mean age was 60, 51% female and 34% black adults, with each participant wearing a Dexcom G4 Platinum CGM for up to 14 days. 
+A second dataset to validate the findings of the primary study used data from the ARIC Gen2 study, which had an older mean age and less medication use.
+In both studies, ADA-recommended metrics and additional percent-time metrics in TIR and TBR, as well as other variability measures were incorporated.
+
+##### Methods
+To define the subgroups, the researchers used a robust and sparse k-means clustering, conducted with the software R version 4.2.2. 
+During validation, the primary study was assessed using an adjusted Rand index, with values closer to 1 indicating higher agreement. 
+
+##### Key Findings
+Five distinct CGM subgroups were found, ranging from Hypoglycemia high-variability, to Well-controlled and Hyperglycemia low-variability. Well-controlled was the largest group, with all participants meeting ADA targets.
+Most crucially, three subgroups had nearly identical median HbA1c (~7%), but dramatically different glucose patterns, indicating that CGM testing provided definitive new information beyond the regular HbA1c monitoring. 
+Furthermore, the subgroups also reflected real biological factors behind the differences in glucose conditions, differing in medication use, lipid profiles, and liver enzymes, etc.
+The external validation yielded an adjusted rand index of 0.52, showing moderate reproducibility. 
+
+##### Limitations
+The study is limited by the small sample size of only 182 participants in the primary dataset, which might not be representative of the general population. Some groups were also very small in size, with just 5 in the hypoglycemia high-variability subgroup. The moderate reproducibility as shown in the rand index might not indicate full stability across different populations. 
+
+## F. AI-READI Reflection
+
+##### What can AI-READI help researchers understand, and what can it not prove?
+
+AI-READI is a research project that uses AI and machine learning to study diabetes by collecting many types of health data from people with and without type 2 diabetes. AI-READI can help researchers understand patterns and associations in type 2 diabetes, such as relations between glucose patterns and sleep quality. Researchers may find groups of people with similar biological profiles, CGM patterns, and lifestyles. With these predictive patterns, researchers may gain insight into what factors might be worth studying in controlled experiments for the future. However, it cannot prove causation, as it only conducts statistical analysis regarding correlation rather than an in-depth investigation on the biological factors behind them. 
+
+## G. Epidemiology Concepts
+
+##### 1. What is the difference between prospective and retrospective studies?
+
+A prospective study starts with a subject and researches its progression forward in time, whereas a retrospective study begins with an outcome, and traces backwards towards the past. Prospective studies are able to show more specific, concrete timing, as researchers can see when the outcome appears. However, they are often more cost-heavy and difficult to conduct than retrospective studies, which are often more budget-friendly and faster. 
+
+##### 2. What is the difference between case-control and longitudinal/cohort studies?
+
+Case-control studies start by separating participants based on the outcome, into a group of people that have the condition, and another of people who don't. Then, researchers look back to see what factors in the past may have caused this variation, looking from the present to the past. They are retrospective by design. 
+
+Longitudinal/cohort studies, on the other hand, look from the present to the future. They start with one group of people, and follow to see what happens. Often, cohort studies are prospective. 
+
+##### 3. Based on your first look at AI-READI, what kinds of data are collected?
+
+Based on a first look, AI-READI contains many different types of health data and isn't restricted to solely diabetes. In addition to data on glucose levels, there is also data on eye vision, the heart, and miscellaneous environment settings. With this multifaceted nature, perhaps AI-READI provides a more comprehensive insight into diabetes conditions beyond simply glucose monitoring. 
+
+
