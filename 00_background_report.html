@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Eric Xie">
+
+<title>Week 0: Background Report</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="00_background_report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="00_background_report_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="00_background_report_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="00_background_report_files/libs/quarto-html/popper.min.js"></script>
+<script src="00_background_report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="00_background_report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="00_background_report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="00_background_report_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="00_background_report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="00_background_report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="00_background_report_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 0: Background Report</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Eric Xie </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="a.-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="a.-introduction">A. Introduction</h2>
+<p>Hello Everyone! My name is Eric Xie, and I’m currently an incoming 12th grader at the high school Geffen Academy. I’m interested in math, physics, and coding, and I hope to pursue Electrical Engineering in college.</p>
+<p>With this internship, I hope to strengthen my data analysis skills and become more comfortable working with evidence analysis in the realm of research. I’m also looking forward to improving my skills with software tools such as RStudio, Quarto, and GitHub, and becoming more comfortable with presenting my findings in front of an audience.</p>
+</section>
+<section id="b.-reproducible-research" class="level2">
+<h2 class="anchored" data-anchor-id="b.-reproducible-research">B. Reproducible Research</h2>
+<section id="question-what-does-reproducible-research-mean-to-me" class="level5">
+<h5 class="anchored" data-anchor-id="question-what-does-reproducible-research-mean-to-me">Question: What does reproducible research mean to me?</h5>
+<p>Reproducibility in research refers to the ability of independent researchers to redo and reproduce the same findings as the original investigator of the research project. The background requirement for this is that the original researcher should ensure that the written procedures, including required materials and step-by-step guidelines, are accessible and clear. In short, to conduct reproducible research one needs to not only present the final conclusion, but also the intermediate process from start to finish of how the research progresses, including transparent documentation on potential limitations of the findings or unanticipated errors. In my personal experiences, my lab reports after experiments in physics class last school year demonstrated reproducibility, as I wrote detailed procedure and material lists, and investigated sources that could have explained deviations in the conclusion.</p>
+</section>
+</section>
+<section id="c.-small-r-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="c.-small-r-exercise">C. Small R Exercise</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Fuel Efficiency vs Car Weight"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Weight (1000 lbs)"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Miles per Gallon"</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_limits</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="00_background_report_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Note: The gray shaded area represents the 95% confidence interval for the smoothed trend line</p>
+<section id="interpretation" class="level5">
+<h5 class="anchored" data-anchor-id="interpretation">Interpretation</h5>
+<p>Main Finding: There is a clear negative correlation between car weight and fuel efficiency, meaning that the heavier a car is, the less fuel efficient it is (less miles per gallon of gas).</p>
+<p>However, towards the end of trend line, as the car weight reaches a certain point, the graph flattens out slightly, meaning that among heavier cars, differences in weight produce smaller changes in fuel efficiency than they do in lighter cars, within the scope of this data set.</p>
+<p>The confidence band is narrower towards the middle of the weight range, indicating that the trend line is a more reliable estimate of fuel efficiency for cars of moderate weight.</p>
+</section>
+</section>
+<section id="d.-background-memo" class="level2">
+<h2 class="anchored" data-anchor-id="d.-background-memo">D. Background Memo</h2>
+<p>The Hemoglobin A1c (HbA1c) test and the Continuous Glucose Monitoring (CGM) test are two common methods of monitoring diabetes type 2 after diagnosis. Though both could provide strong insight into glucose levels, HbA1c is more commonly used to track long-term blood glucose levels, whereas CGM is able to show a more detailed, hour-to-hour picture of how a patient’s glucose levels fluctuate.</p>
+<p>The root behind this difference in function lies in how the two tests measure glucose. HbA1c measures glucose indirectly by measuring how much glucose has attached to the hemoglobin inside red blood cells. The HbA1c shows a rough average glucose level over a period of time (roughly 2-3 months), not at the instant of testing. On the other hand, CGM measures glucose directly and constantly by using a sensor under the patient’s skin to estimate glucose in interstitial fluids every few minutes, providing real-time tracking of glucose levels. Therefore, for scenarios of measuring time in range or above range, CGM is the optimal option, as it is more adept at depicting glucose variability: not only how much it changes in magnitude, but also how often it varies, and when.</p>
+<p>In real-life scenarios, practical uses of CGM could be monitoring post-meal spikes, nighttime lows or highs, or short-term trends in glucose levels, helping the patient better understand his body and be able to make decisions accordingly. CGM is also able to detect hypoglycemic episodes, occurring during a significant dip in a patient’s glucose level, alerting the patient. As hypoglycemic episodes could be dangerous in that glucose is the brain’s main fuel source, and when levels drop beyond a threshold, the patient could experience shakiness, sweating, dizziness, hunger, weakness, fast heartbeat, with more serious episodes entailing fainting, seizures, or loss of consciousness. It’s especially risky during sleep time, as the patient might not even notice the symptoms without the CGM sensor’s alert.</p>
+<p>However, it’s also crucial to note that HbA1c is also able to reveal patient conditions that CGM is not. Specifically, due to its long-term monitoring nature, HbA1c can reveal long-term risks that could be linked to higher risk of diabetes complications over time, and could also be used as a tool of diagnosis, whereas CGM cannot. Thus, ultimately, both methods are important in that they provide different but complementary information, allowing for a more complete understanding of glucose control than either method could provide alone.</p>
+</section>
+<section id="e.-paper-summary" class="level2">
+<h2 class="anchored" data-anchor-id="e.-paper-summary">E. Paper Summary</h2>
+<p>He et al.&nbsp;2026, Defining Clinically Interpretable Glycemic Profiles Using Continuous Glucose Monitoring in Type 2 Diabetes</p>
+<p>Access: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12925982/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12925982/</a></p>
+<section id="main-research-question" class="level5">
+<h5 class="anchored" data-anchor-id="main-research-question">Main Research Question</h5>
+<p>In He et al.’s study, researchers aimed to define meaningful subcategories of type 2 diabetes patients and hypoglycemic tracking using continuous glucose monitoring (CGM) and metrics clinicians already understand.</p>
+</section>
+<section id="data-used" class="level5">
+<h5 class="anchored" data-anchor-id="data-used">Data Used</h5>
+<p>The study’s primary dataset was profiles obtained from the HYPNOS trial, in which the mean age was 60, 51% female and 34% black adults, with each participant wearing a Dexcom G4 Platinum CGM for up to 14 days to track glucose levels, TIR, TBR, and other metrics for diabetes monitoring.</p>
+<p>A second dataset to validate the findings of the primary study used data from the ARIC Gen2 study, which had an older mean age and less medication use. In both studies, ADA-recommended metrics and additional percent-time metrics in TIR and TBR, as well as other variability measures were incorporated.</p>
+</section>
+<section id="methods" class="level5">
+<h5 class="anchored" data-anchor-id="methods">Methods</h5>
+<p>To define the subgroups, the researchers used a robust and sparse k-means clustering, conducted with the programming language R version 4.2.2. During validation, the primary study was assessed using an adjusted Rand index, with values closer to 1 indicating higher agreement.</p>
+</section>
+<section id="key-findings" class="level5">
+<h5 class="anchored" data-anchor-id="key-findings">Key Findings</h5>
+<p>Five distinct CGM subgroups were found, ranging from Hypoglycemia high-variability, to Well-controlled and Hyperglycemia low-variability. Well-controlled was the largest group, with all participants meeting ADA targets. Most crucially, three subgroups in the study had nearly identical median HbA1c (~7%), but dramatically different glucose patterns, indicating that CGM testing provided definitive new information beyond the regular HbA1c monitoring. Furthermore, the subgroups also reflected real biological factors behind the differences in glucose conditions, differing in medication use, lipid profiles, and liver enzymes, etc. The external validation yielded an adjusted rand index of 0.52, showing moderate reproducibility.</p>
+</section>
+<section id="limitations" class="level5">
+<h5 class="anchored" data-anchor-id="limitations">Limitations</h5>
+<p>The study is limited by the small sample size of only 182 participants in the primary dataset, which might not be representative of the general population. Some groups were also very small in size, with just 5 in the hypoglycemia high-variability subgroup. The moderate reproducibility as shown in the rand index might not indicate full stability across different populations.</p>
+</section>
+</section>
+<section id="f.-ai-readi-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="f.-ai-readi-reflection">F. AI-READI Reflection</h2>
+<section id="what-can-ai-readi-help-researchers-understand-and-what-can-it-not-prove" class="level5">
+<h5 class="anchored" data-anchor-id="what-can-ai-readi-help-researchers-understand-and-what-can-it-not-prove">What can AI-READI help researchers understand, and what can it not prove?</h5>
+<p>AI-READI is a research project that uses AI and machine learning to study diabetes by collecting many types of health data from people with and without type 2 diabetes. AI-READI can help researchers understand patterns and associations in type 2 diabetes, such as relations between glucose patterns and sleep quality. Researchers may find groups of people with similar biological profiles, CGM patterns, and lifestyles. With these predictive patterns, researchers may gain insight into what factors might be worth studying in controlled experiments for the future. However, it cannot prove causation, as it only conducts statistical analysis regarding correlation rather than an in-depth investigation on the biological factors behind them.</p>
+</section>
+</section>
+<section id="g.-epidemiology-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="g.-epidemiology-concepts">G. Epidemiology Concepts</h2>
+<section id="what-is-the-difference-between-prospective-and-retrospective-studies" class="level5">
+<h5 class="anchored" data-anchor-id="what-is-the-difference-between-prospective-and-retrospective-studies">1. What is the difference between prospective and retrospective studies?</h5>
+<p>A prospective study starts with a subject and researches its progression forward in time, whereas a retrospective study begins with an outcome, and traces backwards towards the past. Prospective studies are able to show more specific, concrete timing, as researchers can see when the outcome appears. However, they are often more cost-heavy and difficult to conduct than retrospective studies, which are often more budget-friendly and faster.</p>
+</section>
+<section id="what-is-the-difference-between-case-control-and-longitudinalcohort-studies" class="level5">
+<h5 class="anchored" data-anchor-id="what-is-the-difference-between-case-control-and-longitudinalcohort-studies">2. What is the difference between case-control and longitudinal/cohort studies?</h5>
+<p>Case-control studies start by separating participants based on the outcome, into a group of people that have the condition, and another of people who do not. Then, researchers look back to see what factors in the past may have caused this variation, looking from the present to the past. They are retrospective by design.</p>
+<p>Longitudinal/cohort studies, on the other hand, look from the present to the future. They start with one group of people, and follow to see what happens. Often, cohort studies are prospective.</p>
+</section>
+<section id="based-on-your-first-look-at-ai-readi-what-kinds-of-data-are-collected" class="level5">
+<h5 class="anchored" data-anchor-id="based-on-your-first-look-at-ai-readi-what-kinds-of-data-are-collected">3. Based on your first look at AI-READI, what kinds of data are collected?</h5>
+<p>Based on my first look, AI-READI contains many different types of health data and isn’t restricted to solely diabetes. In addition to data on glucose levels, there is also data on eye vision, the heart, and miscellaneous environment settings. With this multifaceted nature, perhaps AI-READI provides a more comprehensive insight into diabetes conditions beyond simply glucose monitoring.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
